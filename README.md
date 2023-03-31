@@ -119,6 +119,7 @@ vi /etc/fstab
 ```
 vi /etc/default/grub 
 grub2-mkconfig -o /boot/grub2/grub.cfg
+dracut -f -v 
 grub2-install /dev/sdb
 ```
 Выключаем SELINUX, правим в значение `Disabled`:
