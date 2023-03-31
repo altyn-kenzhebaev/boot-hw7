@@ -108,7 +108,7 @@ mount /dev/mapper/vg01-root /mnt
 xfsdump -J - /dev/VolGroup00/LogVol00 | xfsrestore -J - /mnt
 rsync -avx /boot/ /mnt/boot/
 for i in /proc/ /sys/ /dev/ /run/ ; do mount --bind $i /mnt/$i; done
-chroot /mnt/root
+chroot /mnt
 yum update grub2 -y
 ```
 меняем на наш новый lvm и комментируем /boot:
